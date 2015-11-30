@@ -1,6 +1,11 @@
 # mixy
 Sugar methods to manipulate objects.
 
+[![version](https://img.shields.io/npm/v/mixy.svg)](https://www.npmjs.org/package/mixy)
+[![status](https://travis-ci.org/zoubin/mixy.svg?branch=master)](https://travis-ci.org/zoubin/mixy)
+[![coverage](https://img.shields.io/coveralls/zoubin/mixy.svg)](https://coveralls.io/github/zoubin/mixy)
+[![devDependencies](https://david-dm.org/zoubin/mixy/dev-status.svg)](https://david-dm.org/zoubin/mixy#info=devDependencies)
+
 ## Methods
 
 ```javascript
