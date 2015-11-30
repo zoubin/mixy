@@ -15,7 +15,15 @@ var mix = mixy.mix
 
 ```
 
-### r = mix(r, ...sources)
+* [`mix`](#mix)
+* [`fill`](#fill)
+* [`pick`](#pick)
+* [`exclude`](#exclude)
+* [`del`](#del)
+
+### mix
+Signature: `r = mix(r, ...sources)`
+
 Mix own properties from all `sources` into the receiver object `r`.
 
 ```javascript
@@ -25,7 +33,9 @@ mix(o, { x: 2 }, null, { y: 3 }, { x: 4 })
 
 ```
 
-### r = fill(r, defaults)
+### fill
+Signature: `r = fill(r, defaults)`
+
 Mix own properties from `defaults` into the receiver object `r`, except those `r` already owns.
 
 ```javascript
@@ -35,7 +45,9 @@ fill(o, { x: 2, z: 3, w: 4, a: null, b: undefined })
 
 ```
 
-### o = pick(keys, ...sources)
+### pick
+Signature: `o = pick(keys, ...sources)`
+
 Pick properties specified in `keys` from `sources` to create the returned object.
 
 ```javascript
@@ -47,8 +59,10 @@ o = pick('x', { x: 1, y: 2 }, { x: 3 })
 
 ```
 
-### o = exclude(keys, ...sources)
-Pick properties except thos specified in `keys` from `sources` to create the returned object.
+### exclude
+Signature: `o = exclude(keys, ...sources)`
+
+Pick properties from `sources` to create the returned object, except those specified in `keys`.
 
 ```javascript
 var o = exclude('y', { x: 1, y: 2 }, null, { x: 3 })
@@ -59,7 +73,9 @@ o = exclude(['x', 'y'], { x: 1, y: 2, z: 3 }, { x: 3, z: 4 })
 
 ```
 
-### o = del(keys, target)
+### del
+Signature: `o = del(keys, target)`
+
 Delete `keys` from `target`,
 and return a new object containing those deleted `key-value`s.
 If none is deleted, `null` will be returned.
